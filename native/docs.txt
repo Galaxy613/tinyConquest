@@ -1,0 +1,106 @@
+<!--------------------------------------------------NOTICE--------------------------------------------------!>
+ This simply provides info on the functions available, and not how to get everything working in your project!
+<!----------------------------------------------------------------------------------------------------------!>
+
+ Although in these Docs, the class name "Kongregate" is used to make the function calls, using "Kong" is also
+ perfectly fine, so "Kongregate.Connect()" and "Kong.Connect()" are both identical, same goes for all other
+ functions too.
+
+--------------------------------------------------------------------------------------------------------------
+
+ Kongregate.Connect()
+ >>Parameters: None
+ >>Returns   : Nothing
+
+ >>Must be called before any other API calls become accessible, preferably in "OnCreate()" or similar method.
+
+--------------------------------------------------------------------------------------------------------------
+
+ Kongregate.SubmitStat( stat:String, value:int)
+ >>Parameters: stat as a String -> The name of the stat you are submitting. This needs to be entered on the
+				   Kongregate website when uploading your game. It is case sensitive.
+
+	       value as an Int  -> The value of the stat. This MUST be an integer value (No floats allowed),
+				   as Kongregate API does not support Float value stats.
+
+ >>Returns   : Nothing
+
+ >>When adding values to the highscore page when uploading a game to Kongregate, you must ensure the stat
+   you track, and the stat string you submit in the game are both identical, including CASE SENSITIVITY!
+
+--------------------------------------------------------------------------------------------------------------
+
+ Kongregate.GetUsername:String()
+ >>Parameters: None
+ >>Returns   : A String
+
+ >>Will return the username of the user, providing they are logged in to the website. If they are not, this
+   function will return the string "Guest"
+
+--------------------------------------------------------------------------------------------------------------
+
+ Kongregate.IsGuest:Bool()
+ >>Parameters: None
+ >>Returns   : A Bool
+
+ >>Will return TRUE if the user is a guest (Not logged in), or FALSE if the user is logged in
+
+--------------------------------------------------------------------------------------------------------------
+
+ Kongregate.IsConnected:Bool()
+ >>Parameters: None
+ >>Returns   : A Bool
+
+ >>Will return TRUE if the session is successfully connected to the Kongregate API system, or FALSE if not.
+
+--------------------------------------------------------------------------------------------------------------
+
+ Kongregate.GetUserId:Int()
+ >>Parameters: None
+ >>Returns   : An Int
+
+ >>Will return the Kongregate User ID of the currently logged in user. Will return 0 if not logged in.
+
+ >>WARNING: This function can cause problems when testing locally, as the "shadow" API service seems to
+            occasionally have issues when this function is called.
+
+--------------------------------------------------------------------------------------------------------------
+
+ Kongregate.PrivateMessage( pm:String )
+ >>Parameters: pm as a String -> The message that you wish to send.
+ >>Returns   : Nothing
+
+ >>Can be used to send a private message to a user (Appears FROM the game, not your profile). Has no effect
+   if the user is not logged in.
+
+ >>NOTICE: This can not be used by default, you must first contact Kongregate for permission to use in your
+           game
+
+--------------------------------------------------------------------------------------------------------------
+
+ Kongregate.ShowSignInBox()
+ >>Parameters: None
+ >>Returns   : None
+
+ >>Will show the Kongregate Sign In Box in the chat window if the user is not logged in. Has no effect if
+   the user is logged in.
+
+--------------------------------------------------------------------------------------------------------------
+
+ Kongregate.GetGameAuthToken:String()
+ >>Parameters: None
+ >>Returns   : A String
+
+ >>Will return the game auth token, a long string. I honestly have no idea what this is used for...
+ 
+ >>WARNING: This function can cause problems when testing locally, as the "shadow" API service seems to
+            occasionally have issues when this function is called.
+
+--------------------------------------------------------------------------------------------------------------
+
+ Kongregate.ShowRegisterBox:Bool()
+ >>Parameters: None
+ >>Returns   : A Bool
+
+ >>Will show the Kongregate Register Box in the chat window if the user is not logged in. Has no effect if
+   the user is logged in.

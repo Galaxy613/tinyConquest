@@ -1,0 +1,23 @@
+||
+|| Kongregate API - Monkey version
+||
+|| Created & maintained by Brad Davies (DPbrad)
+||
+
+|| This module allows games created in Monkey to make use of the Kongregate API when building a game to the Flash target (All other targets are not supported by Kongregate).
+|| 
+|| Info...
+||
+|||| - The entire module was created and tested by Brad Davies (DPbrad), and you use it at your own risk. That includes if it tries to maim or kill you, I am not responsible!
+|||| - It is still a work-in-progress, I will be refining it and improving things over time.
+
+|| Module History
+||
+|||| V1 (20/03/2012) - Initial Version
+||
+|||| v2 (21/03/2012) - Added shorter "Kong.*" static class call
+||||                 - Minor changes
+||
+|||| v3 (21/03/2012) - Released on monkeycoder forums
+||||		     - Changed module name to "kongregate" from "kongregate-api"
+||||		     - Added Pre-Processor directives to allow function call in other targets with no errors

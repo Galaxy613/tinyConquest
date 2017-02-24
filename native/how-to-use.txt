@@ -1,0 +1,40 @@
+!--------------------------------------------------------------------------------------------------!
+ This "kongregate" module is provided by Brad Davies (DPbrad), and and you use it at your own risk!
+!--------------------------------------------------------------------------------------------------!
+
+Step 1) Import the module
+
+You should have placed the entire "kongregate" folder inside your "Monkey/modules" folder. Once that is done, in your project, simply import the module wherever you want to use it;
+
+	Import kongregate
+
+Step 2) Connecting to the API
+
+In order to make use of any of the API calls, you must first connect to the API, preferably in your applications "OnCreate()" method or similar. Calling any of the API functions without first connecting will lead to problems. You connect to the API by calling this function;
+
+	Kongregate.Connect()
+
+Step 3) Use the API!
+
+The connection call may take a small amount of time to establish (depending on many factors...), but once connection has been established, all the function calls become fully enabled. These include
+
+	Kongregate.SubmitStat( stat:String, value:Int)
+	Kongregate.GetUsername:String()
+	Kongregate.IsGuest:Bool()
+	Kongregate.IsConnected:Bool()
+	Kongregate.GetUserId:Int()		*Warning
+	Kongregate.PrivateMessage( pm:String)
+	Kongregate.ShowSignInBox()
+	Kongregate.GetGameAuthToken()		**Warning
+	Kongregate.ShowRegisterBox()
+
+*,** = These functions can cause issues when testing locally.
+
+<!--NOTICE--!>
+All of the functions are detailed in the documentation, this is just a guide on how to get started!
+
+Step 4) ENJOY!
+
+Most of these functions will return default values when testing locally, and you can even test they work when building to Flash by uploading
+to Kongregate. This will allow you to ensure the API works correctly, and if your game isn't quite finished, you dont have to publish straight
+away, as you can test your game in "Preview" mode first to ensure the API is working.
